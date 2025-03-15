@@ -294,7 +294,8 @@ def load_models():
                 diabetes_dig = 'Congratulation,You are not diabetic'
                 image = Image.open('negative.jpg')
                 st.image(image, caption='')
-            st.success(name+' , ' + diabetes_dig)
+           
+            st.success( diabetes_dig)
             
             
 
@@ -418,7 +419,7 @@ def load_models():
                 heart_dig = "Congratulation , You don't have Heart Disease."
                 image = Image.open('negative.jpg')
                 st.image(image, caption='')
-            st.success(name +' , ' + heart_dig)
+            st.success(heart_dig)
 
 
 
@@ -503,7 +504,7 @@ def load_models():
                 parkinson_dig = "Congratulation , You don't have Parkinson disease"
                 image = Image.open('negative.jpg')
                 st.image(image, caption='')
-            st.success(name+' , ' + parkinson_dig)
+            st.success( parkinson_dig)
 
 
 
@@ -608,7 +609,7 @@ def load_models():
                 image = Image.open('negative.jpg')
                 st.image(image, caption='')
 
-            st.success(name + ', ' + cancer_result)
+            st.success(cancer_result)
 
 
 
