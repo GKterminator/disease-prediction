@@ -73,6 +73,7 @@ def load_models():
     # sidebar
     with st.sidebar:
         selected = option_menu('Multiple Disease Prediction', [
+            'wei',
             'Disease Prediction',
             'Diabetes Prediction',
             'Heart disease Prediction',
@@ -285,6 +286,7 @@ def load_models():
             # after the prediction is done if the value in the list at index is 0 is 1 then the person is diabetic
             if diabetes_prediction[0] == 1:
                 diabetes_dig = "we are really sorry to say but it seems like you are Diabetic."
+                diabetes_dig = 'Recommended Doctor : Dr NAVANEETH,Dr BALAKRISHNAN'
                 image = Image.open('positive.jpg')
                 st.image(image, caption='')
                 
@@ -408,6 +410,7 @@ def load_models():
 
             if heart_prediction[0] == 1:
                 heart_dig = 'we are really sorry to say but it seems like you have Heart Disease.'
+                heart_dig = 'Recommended Doctor :  Dr ANJALI , Dr PARVATHI'
                 image = Image.open('positive.jpg')
                 st.image(image, caption='')
                 
@@ -493,6 +496,7 @@ def load_models():
 
             if parkinson_prediction[0] == 1:
                 parkinson_dig = 'we are really sorry to say but it seems like you have Parkinson disease'
+                parkinson_dig = 'Recommended Doctor : Dr KARTHIKA , Dr RISHIKESH'
                 image = Image.open('positive.jpg')
                 st.image(image, caption='')
             else:
@@ -595,6 +599,8 @@ def load_models():
             # Display result
             if cancer_prediction[0] == 'YES':
                 cancer_result = "The model predicts that there is a risk of Lung Cancer."
+                cancer_result = 'Recommended Doctor : Dr RANJITH , Dr BINDU'
+                
                 image = Image.open('positive.jpg')
                 st.image(image, caption='')
             else:
@@ -659,6 +665,7 @@ def load_models():
                 image = Image.open('positive.jpg')
                 st.image(image, caption='')
                 liver_dig = "we are really sorry to say but it seems like you have liver disease."
+                liver_dig = 'Recommended Doctor : Dr BINDU , Dr RANJITH'
             else:
                 image = Image.open('negative.jpg')
                 st.image(image, caption='')
